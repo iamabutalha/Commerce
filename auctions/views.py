@@ -1,10 +1,15 @@
 from django.contrib.auth import authenticate, login, logout
 from django.db import IntegrityError
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
 from django.urls import reverse
+from django.core.exceptions import ValidationError
+from django.contrib.auth.decorators import login_required
 
 from .models import User
+
+from .models import User, AuctionListing, Bid, Comment
+from .forms import AuctionListingForm,
 
 
 def index(request):
