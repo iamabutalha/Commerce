@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.core.exceptions import ValidationError
 from django.contrib.auth.decorators import login_required
 
-from .models import User
+from .models import User 
 
 from .models import User, AuctionListing, Bid, Comment
 from .forms import AuctionListingForm, CommentForm
